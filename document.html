@@ -1,0 +1,352 @@
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang="en"&gt;</p>
+<p>&lt;head&gt;</p>
+<p>    &lt;meta charset="UTF-8"&gt;</p>
+<p>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p>    &lt;title&gt;For You, My Love 💜&lt;/title&gt;</p>
+<p>    &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;family=Sacramento&amp;display=swap" rel="stylesheet"&gt;</p>
+<p>    &lt;style&gt;</p>
+<p>        :root {</p>
+<p>            --bg-gradient: linear-gradient(135deg, #2a1b3d 0%, #150b24 100%);</p>
+<p>            --card-bg: rgba(45, 30, 68, 0.75);</p>
+<p>            --accent-purple: #b070f0;</p>
+<p>            --accent-pink: #ff8fab;</p>
+<p>            --light-purple: #e2cbf7;</p>
+<p>            --text-main: #fff5f8;</p>
+<p>            --text-muted: #d4c5e2;</p>
+<p>        }</p>
+<p> </p>
+<p>        body {</p>
+<p>            margin: 0;</p>
+<p>            padding: 20px 0;</p>
+<p>            font-family: 'Poppins', sans-serif;</p>
+<p>            background: var(--bg-gradient);</p>
+<p>            color: var(--text-main);</p>
+<p>            display: flex;</p>
+<p>            justify-content: center;</p>
+<p>            align-items: center;</p>
+<p>            min-height: 100vh;</p>
+<p>            overflow-x: hidden;</p>
+<p>            position: relative;</p>
+<p>            box-sizing: border-box;</p>
+<p>        }</p>
+<p> </p>
+<p>        .bg-shapes {</p>
+<p>            position: absolute;</p>
+<p>            top: 0;</p>
+<p>            left: 0;</p>
+<p>            width: 100%;</p>
+<p>            height: 100%;</p>
+<p>            overflow: hidden;</p>
+<p>            z-index: -1;</p>
+<p>            pointer-events: none;</p>
+<p>        }</p>
+<p> </p>
+<p>        .bg-shapes div {</p>
+<p>            position: absolute;</p>
+<p>            width: 60px;</p>
+<p>            height: 60px;</p>
+<p>            background: rgba(176, 112, 240, 0.05);</p>
+<p>            border-radius: 50%;</p>
+<p>            animation: float 8s infinite ease-in-out;</p>
+<p>        }</p>
+<p> </p>
+<p>        .bg-shapes div:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }</p>
+<p>        .bg-shapes div:nth-child(2) { top: 75%; left: 80%; animation-delay: 3s; width: 90px; height: 90px; }</p>
+<p>        .bg-shapes div:nth-child(3) { top: 40%; left: 85%; animation-delay: 5s; width: 40px; height: 40px; }</p>
+<p> </p>
+<p>        @keyframes float {</p>
+<p>            0%, 100% { transform: translateY(0) scale(1); }</p>
+<p>            50% { transform: translateY(-20px) scale(1.1); }</p>
+<p>        }</p>
+<p> </p>
+<p>        .container {</p>
+<p>            width: 90%;</p>
+<p>            max-width: 440px;</p>
+<p>            background: var(--card-bg);</p>
+<p>            backdrop-filter: blur(12px);</p>
+<p>            -webkit-backdrop-filter: blur(12px);</p>
+<p>            padding: 35px 25px;</p>
+<p>            border-radius: 25px;</p>
+<p>            box-shadow: 0 15px 35px rgba(21, 11, 36, 0.5);</p>
+<p>            text-align: center;</p>
+<p>            border: 1px solid rgba(226, 203, 247, 0.15);</p>
+<p>            box-sizing: border-box;</p>
+<p>        }</p>
+<p> </p>
+<p>        .heart-icon {</p>
+<p>            font-size: 35px;</p>
+<p>            color: var(--accent-pink);</p>
+<p>            margin-bottom: 5px;</p>
+<p>            display: inline-block;</p>
+<p>            animation: heartbeat 1.5s infinite ease-in-out;</p>
+<p>        }</p>
+<p> </p>
+<p>        @keyframes heartbeat {</p>
+<p>            0%, 100% { transform: scale(1); }</p>
+<p>            50% { transform: scale(1.18); }</p>
+<p>        }</p>
+<p> </p>
+<p>        h1 {</p>
+<p>            font-family: 'Sacramento', cursive, sans-serif;</p>
+<p>            color: var(--light-purple);</p>
+<p>            font-size: 46px;</p>
+<p>            margin: 0 0 5px 0;</p>
+<p>            font-weight: normal;</p>
+<p>        }</p>
+<p> </p>
+<p>        .subtitle {</p>
+<p>            font-size: 12px;</p>
+<p>            color: var(--accent-pink);</p>
+<p>            margin-bottom: 20px;</p>
+<p>            letter-spacing: 1.5px;</p>
+<p>            text-transform: uppercase;</p>
+<p>            font-weight: 500;</p>
+<p>        }</p>
+<p> </p>
+<p>        /* Music Player Styling */</p>
+<p>        .audio-player {</p>
+<p>            background: rgba(255, 143, 175, 0.05);</p>
+<p>            border: 1px dashed rgba(255, 143, 175, 0.25);</p>
+<p>            padding: 12px;</p>
+<p>            border-radius: 15px;</p>
+<p>            margin-bottom: 20px;</p>
+<p>            display: flex;</p>
+<p>            align-items: center;</p>
+<p>            justify-content: space-between;</p>
+<p>        }</p>
+<p> </p>
+<p>        .audio-info {</p>
+<p>            text-align: left;</p>
+<p>        }</p>
+<p> </p>
+<p>        .audio-title {</p>
+<p>            font-size: 13px;</p>
+<p>            font-weight: 500;</p>
+<p>            color: var(--light-purple);</p>
+<p>            margin: 0;</p>
+<p>        }</p>
+<p> </p>
+<p>        .audio-sub {</p>
+<p>            font-size: 11px;</p>
+<p>            color: var(--text-muted);</p>
+<p>            margin: 2px 0 0 0;</p>
+<p>        }</p>
+<p> </p>
+<p>        .play-btn {</p>
+<p>            background: var(--accent-pink);</p>
+<p>            border: none;</p>
+<p>            color: #150b24;</p>
+<p>            padding: 8px 15px;</p>
+<p>            border-radius: 20px;</p>
+<p>            font-size: 11px;</p>
+<p>            font-weight: 600;</p>
+<p>            cursor: pointer;</p>
+<p>            transition: all 0.2s ease;</p>
+<p>        }</p>
+<p> </p>
+<p>        .play-btn:hover {</p>
+<p>            transform: scale(1.05);</p>
+<p>            box-shadow: 0 0 10px rgba(255, 143, 175, 0.4);</p>
+<p>        }</p>
+<p> </p>
+<p>        /* Countdown Widget Styling */</p>
+<p>        .countdown-title {</p>
+<p>            font-size: 12px;</p>
+<p>            text-transform: uppercase;</p>
+<p>            letter-spacing: 1px;</p>
+<p>            color: var(--light-purple);</p>
+<p>            margin-bottom: 10px;</p>
+<p>        }</p>
+<p> </p>
+<p>        .countdown-container {</p>
+<p>            display: flex;</p>
+<p>            justify-content: space-between;</p>
+<p>            margin-bottom: 20px;</p>
+<p>            gap: 8px;</p>
+<p>        }</p>
+<p> </p>
+<p>        .countdown-box {</p>
+<p>            flex: 1;</p>
+<p>            background: rgba(176, 112, 240, 0.12);</p>
+<p>            border: 1px solid rgba(176, 112, 240, 0.2);</p>
+<p>            padding: 10px 5px;</p>
+<p>            border-radius: 12px;</p>
+<p>        }</p>
+<p> </p>
+<p>        .countdown-num {</p>
+<p>            font-size: 20px;</p>
+<p>            font-weight: 600;</p>
+<p>            color: var(--accent-pink);</p>
+<p>            display: block;</p>
+<p>        }</p>
+<p> </p>
+<p>        .countdown-label {</p>
+<p>            font-size: 10px;</p>
+<p>            color: var(--text-muted);</p>
+<p>            text-transform: uppercase;</p>
+<p>        }</p>
+<p> </p>
+<p>        .message-box {</p>
+<p>            background: rgba(176, 112, 240, 0.08);</p>
+<p>            border: 1px solid rgba(176, 112, 240, 0.2);</p>
+<p>            padding: 22px;</p>
+<p>            border-radius: 15px;</p>
+<p>            text-align: left;</p>
+<p>            margin-bottom: 20px;</p>
+<p>        }</p>
+<p> </p>
+<p>        .message-box p {</p>
+<p>            color: var(--text-muted);</p>
+<p>            font-size: 14px;</p>
+<p>            line-height: 1.7;</p>
+<p>            margin: 0;</p>
+<p>        }</p>
+<p> </p>
+<p>        .btn {</p>
+<p>            background: linear-gradient(135deg, var(--accent-purple), #9340db);</p>
+<p>            color: white;</p>
+<p>            border: none;</p>
+<p>            padding: 14px 32px;</p>
+<p>            font-size: 14px;</p>
+<p>            font-weight: 500;</p>
+<p>            border-radius: 30px;</p>
+<p>            cursor: pointer;</p>
+<p>            box-shadow: 0 5px 15px rgba(147, 64, 219, 0.4);</p>
+<p>            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;</p>
+<p>            width: 100%;</p>
+<p>            box-sizing: border-box;</p>
+<p>        }</p>
+<p> </p>
+<p>        .btn:hover {</p>
+<p>            transform: translateY(-2px);</p>
+<p>            box-shadow: 0 8px 20px rgba(147, 64, 219, 0.6);</p>
+<p>            background: linear-gradient(135deg, #bd85f3, var(--accent-purple));</p>
+<p>        }</p>
+<p>        </p>
+<p>        .btn:active {</p>
+<p>            transform: translateY(1px);</p>
+<p>        }</p>
+<p> </p>
+<p>        #secret-message {</p>
+<p>            margin-top: 25px;</p>
+<p>            padding: 18px;</p>
+<p>            background: rgba(255, 143, 175, 0.08);</p>
+<p>            border-radius: 12px;</p>
+<p>            border-left: 4px solid var(--accent-pink);</p>
+<p>            font-size: 14px;</p>
+<p>            color: var(--light-purple);</p>
+<p>            display: none;</p>
+<p>            text-align: left;</p>
+<p>            line-height: 1.6;</p>
+<p>            opacity: 0;</p>
+<p>            transform: translateY(10px);</p>
+<p>            transition: opacity 0.4s ease, transform 0.4s ease;</p>
+<p>        }</p>
+<p> </p>
+<p>        #secret-message.show {</p>
+<p>            display: block;</p>
+<p>            opacity: 1;</p>
+<p>            transform: translateY(0);</p>
+<p>        }</p>
+<p>    &lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p> </p>
+<p>    &lt;div class="bg-shapes"&gt;</p>
+<p>        &lt;div&gt;&lt;/div&gt;</p>
+<p>        &lt;div&gt;&lt;/div&gt;</p>
+<p>        &lt;div&gt;&lt;/div&gt;</p>
+<p>    &lt;/div&gt;</p>
+<p> </p>
+<p>    &lt;div class="container"&gt;</p>
+<p>        &lt;div class="heart-icon"&gt;💜&lt;/div&gt;</p>
+<p>        &lt;h1&gt;Almost 4 Years &amp; Counting&lt;/h1&gt;</p>
+<p>        &lt;div class="subtitle"&gt;Just for my favorite person&lt;/div&gt;</p>
+<p> </p>
+<p>        &lt;!-- Music Track Card --&gt;</p>
+<p>        &lt;div class="audio-player"&gt;</p>
+<p>            &lt;div class="audio-info"&gt;</p>
+<p>                &lt;p class="audio-title"&gt;I Wanna Be Yours 🎵&lt;/p&gt;</p>
+<p>                &lt;p class="audio-sub" id="track-status"&gt;Arctic Monkeys&lt;/p&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>            &lt;button class="play-btn" id="playTrigger" onclick="toggleMusic()"&gt;PLAY&lt;/button&gt;</p>
+<p>            &lt;audio id="bgSong" loop src="https://cdns.imp.iim.prod.api.jiosaavn.com/492/e5e4fa49320e8a7194f15bb632126f58_160.mp4"&gt;&lt;/audio&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p> </p>
+<p>        &lt;!-- Dynamic Live Countdown Counter --&gt;</p>
+<p>        &lt;div class="countdown-title"&gt;Days until we see each other ✈️&lt;/div&gt;</p>
+<p>        &lt;div class="countdown-container" id="timerDisplay"&gt;</p>
+<p>            &lt;div class="countdown-box"&gt;&lt;span class="countdown-num" id="days"&gt;00&lt;/span&gt;&lt;span class="countdown-label"&gt;Days&lt;/span&gt;&lt;/div&gt;</p>
+<p>            &lt;div class="countdown-box"&gt;&lt;span class="countdown-num" id="hours"&gt;00&lt;/span&gt;&lt;span class="countdown-label"&gt;Hrs&lt;/span&gt;&lt;/div&gt;</p>
+<p>            &lt;div class="countdown-box"&gt;&lt;span class="countdown-num" id="minutes"&gt;00&lt;/span&gt;&lt;span class="countdown-label"&gt;Min&lt;/span&gt;&lt;/div&gt;</p>
+<p>            &lt;div class="countdown-box"&gt;&lt;span class="countdown-num" id="seconds"&gt;00&lt;/span&gt;&lt;span class="countdown-label"&gt;Sec&lt;/span&gt;&lt;/div&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class="message-box"&gt;</p>
+<p>            &lt;p&gt;</p>
+<p>                I know distance isn't easy, and sometimes this long-distance journey gets so hard. But after almost four years, I want you to know you're still the only one I want. I miss you so much, and I just want to see you and hold you in person.</p>
+<p>            &lt;/p&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p> </p>
+<p>        &lt;button class="btn" onclick="revealMessage()"&gt;Click this if you want a kiss too 🥺💋&lt;/button&gt;</p>
+<p> </p>
+<p>        &lt;div id="secret-message"&gt;</p>
+<p>            I miss you beyond words. How much longer are we going to be stuck staring at screens? I am so ready to give you the tightest hug and the sweetest kiss when we finally meet. Please reply soon—you're always my favorite. 💜</p>
+<p>        &lt;/div&gt;</p>
+<p>    &lt;/div&gt;</p>
+<p> </p>
+<p>    &lt;script&gt;</p>
+<p>        // Music Player Action</p>
+<p>        function toggleMusic() {</p>
+<p>            var song = document.getElementById("bgSong");</p>
+<p>            var btn = document.getElementById("playTrigger");</p>
+<p>            var status = document.getElementById("track-status");</p>
+<p>            </p>
+<p>            if (song.paused) {</p>
+<p>                song.play().then(() =&gt; {</p>
+<p>                    btn.innerText = "PAUSE";</p>
+<p>                    status.innerText = "Now playing 🎶";</p>
+<p>                }).catch(function(error) {</p>
+<p>                    console.log("Playback error:", error);</p>
+<p>                });</p>
+<p>            } else {</p>
+<p>                song.pause();</p>
+<p>                btn.innerText = "PLAY";</p>
+<p>                status.innerText = "Arctic Monkeys";</p>
+<p>            }</p>
+<p>        }</p>
+<p> </p>
+<p>        // Reveal Secret Message</p>
+<p>        function revealMessage() {</p>
+<p>            var secret = document.getElementById("secret-message");</p>
+<p>            secret.classList.toggle("show");</p>
+<p>        }</p>
+<p> </p>
+<p>        // Countdown Timer</p>
+<p>        var targetDate = new Date("Dec 31, 2026 00:00:00").getTime();</p>
+<p> </p>
+<p>        var countdownInterval = setInterval(function() {</p>
+<p>            var now = new Date().getTime();</p>
+<p>            var distance = targetDate - now;</p>
+<p> </p>
+<p>            if (distance &lt; 0) {</p>
+<p>                clearInterval(countdownInterval);</p>
+<p>                document.getElementById("timerDisplay").innerHTML = "&lt;p style='color:var(--accent-pink); width:100%; margin:0; font-weight:600;'&gt;We are finally together! 🎉&lt;/p&gt;";</p>
+<p>                return;</p>
+<p>            }</p>
+<p> </p>
+<p>            var days = Math.floor(distance / (1000 * 60 * 60 * 24));</p>
+<p>            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));</p>
+<p>            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));</p>
+<p>            var seconds = Math.floor((distance % (1000 * 60)) / 1000);</p>
+<p> </p>
+<p>            document.getElementById("days").innerText = String(day</p>
+<p>s).padStart(2, '0');</p>
+<p>            document.getElementById("hours").innerText = String(hours).padStart(2, '0');</p>
+<p>            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');</p>
+<p>            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');</p>
+<p>        }, 1000);</p>
+<p>    &lt;/script&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
